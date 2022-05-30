@@ -19,7 +19,7 @@ import java.util.Locale;
 /**
  * The class CongestionRoute
  *
- * @author maw, 2022-05-30
+ * @author  maw, 2022-05-30
  * @version 1.0
  */
 @ApplicationScoped
@@ -51,15 +51,16 @@ public class CongestionRoute extends EndpointRouteBuilder {
                 .process(exchange -> {
                     final Message in = exchange.getIn();
                     final List<CongestionTax> congestionTaxList = in.getBody(List.class);
-                    @SuppressWarnings("OptionalGetWithoutIsPresent") final CongestionTax first = congestionTaxList.stream()
-                                                                                                                  .findFirst()
-                                                                                                                  .get();
+                    @SuppressWarnings("OptionalGetWithoutIsPresent")
+                    final CongestionTax first = congestionTaxList.stream()
+                            .findFirst()
+                            .get();
                     final int tax = CongestionTaxCalculator.getTax(congestionTaxList);
                     log.info(String.format("Tax for vehicle %s of type %s will be taxed the amount of SEK %d",
-                                           first.getRegNo()
-                                                .toUpperCase(Locale.ROOT),
-                                           first.getVehicle().getVehicleType(),
-                                           tax));
+                            first.getRegNo()
+                                    .toUpperCase(Locale.ROOT),
+                            first.getVehicle().getVehicleType(),
+                            tax));
                 })
                 .end();
     }
@@ -72,24 +73,24 @@ public class CongestionRoute extends EndpointRouteBuilder {
         /**
          * Aggregate exchange.
          *
-         * @param oldExchange the old exchange
-         * @param newExchange the new exchange
-         * @return the exchange
+         * @param  oldExchange the old exchange
+         * @param  newExchange the new exchange
+         * @return             the exchange
          */
         public Exchange aggregate(final Exchange oldExchange, final Exchange newExchange) {
             final Exchange result;
             final CongestionTax newBody = (CongestionTax) newExchange.getIn()
-                                                                     .getHeader("Vehicle");
+                    .getHeader("Vehicle");
             final List<CongestionTax> list;
             if (oldExchange == null) {
                 list = new LinkedList<>();
                 list.add(newBody);
                 newExchange.getIn()
-                           .setBody(list);
+                        .setBody(list);
                 result = newExchange;
             } else {
                 list = oldExchange.getIn()
-                                  .getBody(List.class);
+                        .getBody(List.class);
                 list.add(newBody);
                 result = oldExchange;
             }

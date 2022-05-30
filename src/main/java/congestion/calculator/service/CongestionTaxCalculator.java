@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.OptionalInt;
 
 /**
  * The type Congestion tax calculator.
@@ -38,21 +39,23 @@ public class CongestionTaxCalculator {
     /**
      * Gets tax.
      *
-     * @param congestionTaxList the congestion tax list
-     * @return the tax
+     * @param  congestionTaxList the congestion tax list
+     * @return                   the tax
      */
+    @SuppressWarnings("OptionalGetWithoutIsPresent")
     public static int getTax(final List<CongestionTax> congestionTaxList) {
-        final int sum = congestionTaxList.stream()
-                                         .mapToInt(value -> getTollFee(value.getLocalDateTime(), value.getVehicle()))
-                                         .sum();
-        return sum > TOTAL_TAX ? 60: sum;
+        final OptionalInt max = congestionTaxList.stream()
+                .mapToInt(value -> getTollFee(value.getLocalDateTime(),
+                        value.getVehicle()))
+                .max();
+        return max.getAsInt() > TOTAL_TAX ? 60 : max.getAsInt();
     }
 
     /**
      * Is toll free vehicle boolean.
      *
-     * @param vehicle the vehicle
-     * @return the boolean
+     * @param  vehicle the vehicle
+     * @return         the boolean
      */
     private static boolean isTollFreeVehicle(final Vehicle vehicle) {
         boolean result = false;
@@ -66,9 +69,9 @@ public class CongestionTaxCalculator {
     /**
      * Gets toll fee.
      *
-     * @param date    the date
-     * @param vehicle the vehicle
-     * @return the toll fee
+     * @param  date    the date
+     * @param  vehicle the vehicle
+     * @return         the toll fee
      */
     public static int getTollFee(final LocalDateTime date, final Vehicle vehicle) {
         int result = 13;
@@ -102,8 +105,8 @@ public class CongestionTaxCalculator {
     /**
      * Is toll free date boolean.
      *
-     * @param date the date
-     * @return the boolean
+     * @param  date the date
+     * @return      the boolean
      */
     private static Boolean isTollFreeDate(final LocalDateTime date) {
         boolean result = true;
@@ -115,8 +118,8 @@ public class CongestionTaxCalculator {
             tollFreeDates.add(LocalDate.of(2013, 12, 26));
             tollFreeDates.add(LocalDate.of(2013, 12, 31));
             result = tollFreeDates.stream()
-                                  .anyMatch(localDate -> date.toLocalDate()
-                                                              .isEqual(localDate));
+                    .anyMatch(localDate -> date.toLocalDate()
+                            .isEqual(localDate));
         }
 
         return result;
