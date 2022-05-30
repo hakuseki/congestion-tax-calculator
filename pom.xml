@@ -35,28 +35,36 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-<!--      <dependency>-->
-<!--        <groupId>${camel-quarkus.platform.group-id}</groupId>-->
-<!--        <artifactId>${camel-quarkus.platform.artifact-id}</artifactId>-->
-<!--        <version>${camel-quarkus.platform.version}</version>-->
-<!--        <type>pom</type>-->
-<!--        <scope>import</scope>-->
-<!--      </dependency>-->
+      <dependency>
+        <groupId>${camel-quarkus.platform.group-id}</groupId>
+        <artifactId>${camel-quarkus.platform.artifact-id}</artifactId>
+        <version>${camel-quarkus.platform.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <dependencies>
-<!--    <dependency>-->
-<!--      <groupId>org.apache.camel.quarkus</groupId>-->
-<!--      <artifactId>camel-quarkus-jackson</artifactId>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>org.apache.camel.quarkus</groupId>-->
-<!--      <artifactId>camel-quarkus-rest</artifactId>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>org.apache.camel.quarkus</groupId>-->
-<!--      <artifactId>camel-quarkus-direct</artifactId>-->
-<!--    </dependency>-->
+    <dependency>
+      <groupId>org.apache.camel.quarkus</groupId>
+      <artifactId>camel-quarkus-log</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.camel.quarkus</groupId>
+      <artifactId>camel-quarkus-platform-http</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.camel.quarkus</groupId>
+      <artifactId>camel-quarkus-jackson</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.camel.quarkus</groupId>
+      <artifactId>camel-quarkus-rest</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.camel.quarkus</groupId>
+      <artifactId>camel-quarkus-direct</artifactId>
+    </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-resteasy</artifactId>

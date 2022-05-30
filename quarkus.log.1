@@ -1,0 +1,28 @@
+2022-05-30 16:11:47,190 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [org.apa.cam.qua.cor.CamelBootstrapRecorder] (Quarkus Main Thread) Bootstrap runtime: org.apache.camel.quarkus.main.CamelMainRuntime
+2022-05-30 16:11:47,191 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [org.apa.cam.mai.MainSupport] (Quarkus Main Thread) Apache Camel (Main) 3.16.0 is starting
+2022-05-30 16:11:47,198 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [org.apa.cam.mai.BaseMainSupport] (Quarkus Main Thread) Auto-configuration summary
+2022-05-30 16:11:47,198 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [org.apa.cam.mai.BaseMainSupport] (Quarkus Main Thread)     camel.context.name=CongestionTaxCalculator
+2022-05-30 16:11:48,741 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [org.apa.cam.imp.eng.AbstractCamelContext] (Quarkus Main Thread) Apache Camel 3.16.0 (CongestionTaxCalculator) is starting
+2022-05-30 16:11:48,742 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [org.apa.cam.pro.agg.AggregateProcessor] (Quarkus Main Thread) Defaulting to MemoryAggregationRepository
+2022-05-30 16:11:48,743 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [org.apa.cam.pro.agg.AggregateProcessor] (Quarkus Main Thread) Using CompletionInterval to run every 30000 millis.
+2022-05-30 16:11:48,745 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [org.apa.cam.imp.eng.AbstractCamelContext] (Quarkus Main Thread) Routes startup (total:1 started:1)
+2022-05-30 16:11:48,746 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [org.apa.cam.imp.eng.AbstractCamelContext] (Quarkus Main Thread)     Started route5 (platform-http:///camel/tax/%7Bregno%7D)
+2022-05-30 16:11:48,746 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [org.apa.cam.imp.eng.AbstractCamelContext] (Quarkus Main Thread) Apache Camel 3.16.0 (CongestionTaxCalculator) started in 7ms (build:0ms init:3ms start:4ms)
+2022-05-30 16:11:48,750 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [io.quarkus] (Quarkus Main Thread) congestion-tax-calculator 1.0-SNAPSHOT on JVM (powered by Quarkus 2.9.2.Final) started in 2.396s. Listening on: http://localhost:8080
+2022-05-30 16:11:48,751 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2022-05-30 16:11:48,751 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [camel-attachments, camel-core, camel-direct, camel-jackson, camel-log, camel-platform-http, camel-rest, cdi, resteasy, smallrye-context-propagation, vertx]
+2022-05-30 16:11:48,752 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Live reload total time: 2.716s 
+2022-05-30 16:12:18,748 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [con.cal.rou.CongestionRoute_Subclass] (Camel (CongestionTaxCalculator) thread #10 - Aggregator) Tax for vehicle DEF456 of type congestion.calculator.model.Car@c3f406 will be taxed the amount of SEK 54
+2022-05-30 16:12:18,749 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [con.cal.rou.CongestionRoute_Subclass] (Camel (CongestionTaxCalculator) thread #10 - Aggregator) Tax for vehicle ABC123 of type congestion.calculator.model.Car@6c7f8995 will be taxed the amount of SEK 54
+2022-05-30 16:12:57,480 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] WARN  [io.qua.dep.dev.JavaCompilationProvider] (vert.x-worker-thread-1) unchecked conversion
+  required: java.util.List<congestion.calculator.model.CongestionTax>
+  found:    java.util.List, line 54 in /Users/maw/IdeaProjects/congestion-tax-calculator/src/main/java/congestion/calculator/routes/CongestionRoute.java
+2022-05-30 16:12:57,481 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] WARN  [io.qua.dep.dev.JavaCompilationProvider] (vert.x-worker-thread-1) unchecked conversion
+  required: java.util.List<congestion.calculator.model.CongestionTax>
+  found:    java.util.List, line 83 in /Users/maw/IdeaProjects/congestion-tax-calculator/src/main/java/congestion/calculator/routes/CongestionRoute.java
+2022-05-30 16:12:57,484 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-1) Restarting quarkus due to changes in CongestionRoute.class, CongestionRoute$ArrayListAggregationStrategy.class.
+2022-05-30 16:12:57,485 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [org.apa.cam.imp.eng.AbstractCamelContext] (Quarkus Main Thread) Apache Camel 3.16.0 (CongestionTaxCalculator) shutting down
+2022-05-30 16:12:57,486 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [org.apa.cam.imp.eng.AbstractCamelContext] (Quarkus Main Thread) Routes stopped (total:1 stopped:1)
+2022-05-30 16:12:57,487 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [org.apa.cam.imp.eng.AbstractCamelContext] (Quarkus Main Thread)     Stopped route5 (platform-http:///camel/tax/%7Bregno%7D)
+2022-05-30 16:12:57,487 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [org.apa.cam.imp.eng.AbstractCamelContext] (Quarkus Main Thread) Apache Camel 3.16.0 (CongestionTaxCalculator) shutdown in 2ms (uptime:1m8s)
+2022-05-30 16:12:57,497 maw-macbook-space-5 congestion-tax-calculator-dev.jar[68674] INFO  [io.quarkus] (Quarkus Main Thread) congestion-tax-calculator stopped in 0.012s

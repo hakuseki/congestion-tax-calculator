@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Quarkus" name="Quarkus">
+      <configuration />
+    </facet>
+  </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/.idea/libraries" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Quarkus-2.9.1.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.camel.quarkus:camel-quarkus-jackson:2.9.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel.quarkus:camel-quarkus-log:2.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel.quarkus:camel-quarkus-core:2.9.0" level="project" />
     <orderEntry type="library" name="Maven: io.quarkus:quarkus-arc:2.9.2.Final" level="project" />
     <orderEntry type="library" name="Maven: io.quarkus.arc:arc:2.9.2.Final" level="project" />
@@ -37,43 +41,14 @@
     <orderEntry type="library" name="Maven: org.apache.camel:camel-main:3.16.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel:camel-microprofile-config:3.16.0" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.microprofile.config:microprofile-config-api:2.0.1" level="project" />
-    <orderEntry type="library" name="Maven: io.quarkus:quarkus-jaxp:2.9.2.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.quarkus:quarkus-jackson:2.9.2.Final" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.3" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.3" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.3" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.13.3" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.13.3" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.3" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.3" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.camel:camel-jackson:3.16.0" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:2.0.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.activation:jakarta.activation:1.2.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.camel.quarkus:camel-quarkus-rest:2.9.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel:camel-log:3.16.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel:camel-support:3.16.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel.quarkus:camel-quarkus-platform-http:2.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel.quarkus:camel-quarkus-attachments:2.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel:camel-attachments:3.16.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel:camel-platform-http-vertx:3.16.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel:camel-platform-http:3.16.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel:camel-vertx-common:3.16.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.camel:camel-rest:3.16.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.camel:camel-support:3.16.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.camel:camel-tooling-model:3.16.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.camel:camel-util-json:3.16.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.camel.quarkus:camel-quarkus-direct:2.9.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.camel:camel-direct:3.16.0" level="project" />
-    <orderEntry type="library" name="Maven: io.quarkus:quarkus-resteasy:2.9.2.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.quarkus:quarkus-vertx-http:2.9.2.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.quarkus:quarkus-security-runtime-spi:2.9.2.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.quarkus:quarkus-mutiny:2.9.2.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.smallrye.reactive:mutiny:1.4.0" level="project" />
-    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.3" level="project" />
-    <orderEntry type="library" name="Maven: io.quarkus:quarkus-smallrye-context-propagation:2.9.2.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.smallrye:smallrye-context-propagation:1.2.2" level="project" />
-    <orderEntry type="library" name="Maven: io.smallrye:smallrye-context-propagation-api:1.2.2" level="project" />
-    <orderEntry type="library" name="Maven: io.smallrye:smallrye-context-propagation-storage:1.2.2" level="project" />
-    <orderEntry type="library" name="Maven: io.smallrye.reactive:mutiny-smallrye-context-propagation:1.4.0" level="project" />
-    <orderEntry type="library" name="Maven: io.smallrye.common:smallrye-common-vertx-context:1.11.0" level="project" />
     <orderEntry type="library" name="Maven: io.vertx:vertx-core:4.2.7" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.74.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.74.Final" level="project" />
@@ -87,6 +62,21 @@
     <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.74.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-resolver-dns:4.1.74.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-codec-dns:4.1.74.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.vertx:vertx-web:4.2.7" level="project" />
+    <orderEntry type="library" name="Maven: io.vertx:vertx-web-common:4.2.7" level="project" />
+    <orderEntry type="library" name="Maven: io.vertx:vertx-auth-common:4.2.7" level="project" />
+    <orderEntry type="library" name="Maven: io.vertx:vertx-bridge-common:4.2.7" level="project" />
+    <orderEntry type="library" name="Maven: io.quarkus:quarkus-vertx-http:2.9.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.quarkus:quarkus-security-runtime-spi:2.9.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.quarkus:quarkus-mutiny:2.9.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.smallrye.reactive:mutiny:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.3" level="project" />
+    <orderEntry type="library" name="Maven: io.quarkus:quarkus-smallrye-context-propagation:2.9.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.smallrye:smallrye-context-propagation:1.2.2" level="project" />
+    <orderEntry type="library" name="Maven: io.smallrye:smallrye-context-propagation-api:1.2.2" level="project" />
+    <orderEntry type="library" name="Maven: io.smallrye:smallrye-context-propagation-storage:1.2.2" level="project" />
+    <orderEntry type="library" name="Maven: io.smallrye.reactive:mutiny-smallrye-context-propagation:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: io.smallrye.common:smallrye-common-vertx-context:1.11.0" level="project" />
     <orderEntry type="library" name="Maven: io.smallrye.common:smallrye-common-constraint:1.11.0" level="project" />
     <orderEntry type="library" name="Maven: io.quarkus:quarkus-vertx-http-dev-console-runtime-spi:2.9.2.Final" level="project" />
     <orderEntry type="library" name="Maven: io.quarkus.security:quarkus-security:1.1.4.Final" level="project" />
@@ -104,10 +94,26 @@
     <orderEntry type="library" name="Maven: io.smallrye.reactive:smallrye-mutiny-vertx-web-common:2.21.0" level="project" />
     <orderEntry type="library" name="Maven: io.smallrye.reactive:smallrye-mutiny-vertx-auth-common:2.21.0" level="project" />
     <orderEntry type="library" name="Maven: io.smallrye.reactive:smallrye-mutiny-vertx-bridge-common:2.21.0" level="project" />
-    <orderEntry type="library" name="Maven: io.vertx:vertx-web:4.2.7" level="project" />
-    <orderEntry type="library" name="Maven: io.vertx:vertx-web-common:4.2.7" level="project" />
-    <orderEntry type="library" name="Maven: io.vertx:vertx-auth-common:4.2.7" level="project" />
-    <orderEntry type="library" name="Maven: io.vertx:vertx-bridge-common:4.2.7" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel.quarkus:camel-quarkus-jackson:2.9.0" level="project" />
+    <orderEntry type="library" name="Maven: io.quarkus:quarkus-jaxp:2.9.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.quarkus:quarkus-jackson:2.9.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.3" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.3" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.3" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.13.3" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.13.3" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.3" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel:camel-jackson:3.16.0" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:2.0.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.activation:jakarta.activation:1.2.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel.quarkus:camel-quarkus-rest:2.9.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel:camel-rest:3.16.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel:camel-tooling-model:3.16.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel:camel-util-json:3.16.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel.quarkus:camel-quarkus-direct:2.9.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel:camel-direct:3.16.0" level="project" />
+    <orderEntry type="library" name="Maven: io.quarkus:quarkus-resteasy:2.9.2.Final" level="project" />
     <orderEntry type="library" name="Maven: io.quarkus:quarkus-resteasy-server-common:2.9.2.Final" level="project" />
     <orderEntry type="library" name="Maven: io.quarkus:quarkus-resteasy-common:2.9.2.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.resteasy:resteasy-core:4.7.5.Final" level="project" />
@@ -250,6 +256,7 @@
           <root url="jar://$USER_HOME$/.m2/repository/io/quarkus/quarkus-kubernetes-spi/2.9.2.Final/quarkus-kubernetes-spi-2.9.2.Final.jar!/" />
           <root url="jar://$USER_HOME$/.m2/repository/io/quarkus/qute/qute-core/2.9.2.Final/qute-core-2.9.2.Final.jar!/" />
           <root url="jar://$USER_HOME$/.m2/repository/org/yaml/snakeyaml/1.30/snakeyaml-1.30.jar!/" />
+          <root url="jar://$USER_HOME$/.m2/repository/org/apache/camel/quarkus/camel-quarkus-log-deployment/2.9.0/camel-quarkus-log-deployment-2.9.0.jar!/" />
           <root url="jar://$USER_HOME$/.m2/repository/io/quarkus/quarkus-resteasy-server-common-deployment/2.9.2.Final/quarkus-resteasy-server-common-deployment-2.9.2.Final.jar!/" />
           <root url="jar://$USER_HOME$/.m2/repository/io/quarkus/quarkus-resteasy-common-deployment/2.9.2.Final/quarkus-resteasy-common-deployment-2.9.2.Final.jar!/" />
           <root url="jar://$USER_HOME$/.m2/repository/org/jboss/spec/javax/annotation/jboss-annotations-api_1.3_spec/2.0.1.Final/jboss-annotations-api_1.3_spec-2.0.1.Final.jar!/" />
@@ -301,6 +308,7 @@
           <root url="jar://$USER_HOME$/.m2/repository/io/quarkus/quarkus-jackson-spi/2.9.2.Final/quarkus-jackson-spi-2.9.2.Final-sources.jar!/" />
           <root url="jar://$USER_HOME$/.m2/repository/org/apache/camel/quarkus/camel-quarkus-rest-deployment/2.9.0/camel-quarkus-rest-deployment-2.9.0-sources.jar!/" />
           <root url="jar://$USER_HOME$/.m2/repository/org/yaml/snakeyaml/1.30/snakeyaml-1.30-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.m2/repository/org/apache/camel/quarkus/camel-quarkus-log-deployment/2.9.0/camel-quarkus-log-deployment-2.9.0-sources.jar!/" />
           <root url="jar://$USER_HOME$/.m2/repository/org/webjars/jquery/3.6.0/jquery-3.6.0-sources.jar!/" />
           <root url="jar://$USER_HOME$/.m2/repository/io/quarkus/quarkus-undertow-spi/2.9.2.Final/quarkus-undertow-spi-2.9.2.Final-sources.jar!/" />
           <root url="jar://$USER_HOME$/.m2/repository/io/quarkus/http/quarkus-http-core/4.1.9/quarkus-http-core-4.1.9-sources.jar!/" />
@@ -321,7 +329,7 @@
     </orderEntry>
   </component>
   <component name="Quarkus Tools">
-    <option name="hash" value="1929337294" />
+    <option name="hash" value="1375669921" />
     <option name="version" value="1" />
   </component>
 </module>
