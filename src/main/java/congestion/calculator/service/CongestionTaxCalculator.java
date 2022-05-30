@@ -11,9 +11,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The type Congestion tax calculator.
+ */
 public class CongestionTaxCalculator {
 
+    /**
+     * The constant tollFreeVehicles.
+     */
     private static final Map<String, Integer> tollFreeVehicles = new HashMap<>();
+    /**
+     * The constant TOTAL_TAX.
+     */
+    private static final int TOTAL_TAX = 60;
 
     static {
         tollFreeVehicles.put("Motorcycle", 0);
@@ -25,39 +35,25 @@ public class CongestionTaxCalculator {
 
     }
 
+    /**
+     * Gets tax.
+     *
+     * @param congestionTaxList the congestion tax list
+     * @return the tax
+     */
     public static int getTax(final List<CongestionTax> congestionTaxList) {
-        return congestionTaxList.stream()
-                                .mapToInt(value -> getTollFee(value.getLocalDateTime(), value.getVehicle()))
-                                .sum();
+        final int sum = congestionTaxList.stream()
+                                         .mapToInt(value -> getTollFee(value.getLocalDateTime(), value.getVehicle()))
+                                         .sum();
+        return sum > TOTAL_TAX ? 60: sum;
     }
-//    public int getTax(final Vehicle vehicle, final Date[] dates) {
-//        final Date intervalStart = dates[0];
-//        int totalFee = 0;
-//
-//        for (int i = 0; i < dates.length; i++) {
-//            final Date date = dates[i];
-//            final int nextFee = getTollFee(date, vehicle);
-//            int tempFee = getTollFee(intervalStart, vehicle);
-//
-//            final long diffInMillies = date.getTime() - intervalStart.getTime();
-//            final long minutes = diffInMillies / 1000 / 60;
-//
-//            if (minutes <= 60) {
-//                if (totalFee > 0)
-//                    totalFee -= tempFee;
-//                if (nextFee >= tempFee)
-//                    tempFee = nextFee;
-//                totalFee += tempFee;
-//            } else {
-//                totalFee += nextFee;
-//            }
-//        }
-//
-//        if (totalFee > 60)
-//            totalFee = 60;
-//        return totalFee;
-//    }
 
+    /**
+     * Is toll free vehicle boolean.
+     *
+     * @param vehicle the vehicle
+     * @return the boolean
+     */
     private static boolean isTollFreeVehicle(final Vehicle vehicle) {
         boolean result = false;
         if (vehicle != null) {
@@ -67,6 +63,13 @@ public class CongestionTaxCalculator {
         return result;
     }
 
+    /**
+     * Gets toll fee.
+     *
+     * @param date    the date
+     * @param vehicle the vehicle
+     * @return the toll fee
+     */
     public static int getTollFee(final LocalDateTime date, final Vehicle vehicle) {
         int result = 13;
         if (isTollFreeDate(date) || isTollFreeVehicle(vehicle)) {
@@ -95,35 +98,13 @@ public class CongestionTaxCalculator {
 
         return result;
     }
-//    public int getTollFee(final Date date, final Vehicle vehicle) {
-//        if (isTollFreeDate(date) || isTollFreeVehicle(vehicle))
-//            return 0;
-//
-//        final int hour = date.getHours();
-//        final int minute = date.getMinutes();
-//
-//        if (hour == 6 && minute <= 29)
-//            return 8;
-//        else if (hour == 6 && minute <= 59)
-//            return 13;
-//        else if (hour == 7 && minute <= 59)
-//            return 18;
-//        else if (hour == 8 && minute <= 29)
-//            return 13;
-//        else if (hour >= 8 && hour <= 14 && minute >= 30)
-//            return 8;
-//        else if (hour == 15 && minute <= 29)
-//            return 13;
-//        else if (hour == 15 || hour == 16)
-//            return 18;
-//        else if (hour == 17)
-//            return 13;
-//        else if (hour == 18 && minute <= 29)
-//            return 8;
-//        else
-//            return 0;
-//    }
 
+    /**
+     * Is toll free date boolean.
+     *
+     * @param date the date
+     * @return the boolean
+     */
     private static Boolean isTollFreeDate(final LocalDateTime date) {
         boolean result = true;
         if (date.getDayOfWeek() != DayOfWeek.SATURDAY && date.getDayOfWeek() != DayOfWeek.SUNDAY) {
@@ -140,25 +121,4 @@ public class CongestionTaxCalculator {
 
         return result;
     }
-//    private Boolean isTollFreeDate(final Date date) {
-//        final int year = date.getYear();
-//        final int month = date.getMonth() + 1;
-//        final int day = date.getDay() + 1;
-//        final int dayOfMonth = date.getDate();
-//
-//        if (day == Calendar.SATURDAY || day == Calendar.SUNDAY)
-//            return true;
-//
-//        if (year == 2013) {
-//            return (month == 1 && dayOfMonth == 1) ||
-//                    (month == 3 && (dayOfMonth == 28 || dayOfMonth == 29)) ||
-//                    (month == 4 && (dayOfMonth == 1 || dayOfMonth == 30)) ||
-//                    (month == 5 && (dayOfMonth == 1 || dayOfMonth == 8 || dayOfMonth == 9)) ||
-//                    (month == 6 && (dayOfMonth == 5 || dayOfMonth == 6 || dayOfMonth == 21)) ||
-//                    (month == 7) ||
-//                    (month == 11 && dayOfMonth == 1) ||
-//                    (month == 12 && (dayOfMonth == 24 || dayOfMonth == 25 || dayOfMonth == 26 || dayOfMonth == 31));
-//        }
-//        return false;
-//    }
 }

@@ -64,8 +64,18 @@ public class CongestionRoute extends EndpointRouteBuilder {
                 .end();
     }
 
+    /**
+     * The type Array list aggregation strategy.
+     */
     class ArrayListAggregationStrategy implements AggregationStrategy {
 
+        /**
+         * Aggregate exchange.
+         *
+         * @param oldExchange the old exchange
+         * @param newExchange the new exchange
+         * @return the exchange
+         */
         public Exchange aggregate(final Exchange oldExchange, final Exchange newExchange) {
             final Exchange result;
             final CongestionTax newBody = (CongestionTax) newExchange.getIn()
